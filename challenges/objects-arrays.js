@@ -20,8 +20,8 @@ const steg = {
   name: 'stegosaurus',
   diet: 'hervivorous',
   weight: 2000,
-  lenght: 9,
-  period: 'late jurassic'
+  length: 9,
+  period: 'late jurassic',
 }
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
 const velo = {
@@ -42,7 +42,7 @@ console.log(tyran.weight);
 console.log(velo.diet);
 
 // How long was a stegosaurus?
-console.log(steg.lenght);
+console.log(steg.length);
 
 // What time period did tyrannosaurus live in?
 console.log(tyran.period);
@@ -53,25 +53,6 @@ console.log(tyran.roar());
 
 
 
-// velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceous
-
-// Using your dinosaur objects, log answers to these questions:
-
-// How much did tyrannosaurus weigh?
-console.log(tyran.weight);
-
-// What was the diet of a velociraptor?
-console.log(velo.diet);
-
-// How long was a stegosaurus?
-console.log(steg.lenght);
-
-// What time period did tyrannosaurus live in?
-console.log(tyran.period);
-
-
-// Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log(tyran.roar);
 
 
 // ==== Arrays ====
@@ -117,17 +98,16 @@ console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
 const unisWithUni = [];
-for (i = 0; i < graduates.length; i++) {
-  graduates[i].university;
-  if (graduate[i].university.inlcudes(Uni)){
+for (let i = 0; i < graduates.length; i++){
+  if (graduates[i].university.includes('Uni')){
     unisWithUni.push(graduates[i].university);
+  }
 }
-}
+
 console.log(unisWithUni);
 
 
 // ==== ADVANCED Array Methods ====
-
 // Given this zoo data from around the United States, follow the instructions below.  Use the specific array methods in the requests below to solve the problems.
 
 const zooAnimals = [
@@ -149,9 +129,9 @@ The zoos want to display both the scientific name and the animal name in front o
 
 */
 const displayNames = [];
-zooAnimals.forEach(item =>){
+zooAnimals.forEach(item =>{
   displayNames.push(`${item.animal_name}${item.scientific_name}`)
-}
+})
 console.log(displayNames);
 
 /* Request 2: .map()
